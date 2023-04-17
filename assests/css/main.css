@@ -1,0 +1,167 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0, #ff7337,#ee4d2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__navbar-list {
+    list-style: none;
+    padding-left:0 ;
+    margin-top: 8px;
+}
+.header__navbar-item {
+    margin:0 8px;
+    position: relative;
+    min-height: 25px;
+}
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.header__navbar-item,.header__nav-item-link {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--white-color);
+    text-decoration: none; 
+}
+
+.header__navbar-item:hover,.header__nav-item-link:hover,.header__navbar-icon-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+.header__navbar-item--strong{
+    font-weight: 400;
+}
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-right:1px solid #FB9086;
+    height: 16px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+.header__navbar-icon{
+    font-size: 1.8rem;
+    padding: 0 4px;
+}
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+/* header QR code */
+.header__qr{
+    background-color: var(--white-color);
+    width: 186px;
+    position: absolute;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in .5s;
+}
+.header__qr::before{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -16px;
+    height: 20px;
+    content: "";
+    display: block;
+}
+.header__qr-img{
+    width: 100%;
+}
+.header__qr-app{
+    display: flex;
+    justify-content: center;
+   
+}
+.header__qr-dowload{
+    width: 80px;
+    padding: 0 4px;
+    height: 18px;
+}
+/* header notifycation */
+.header__notify {
+    position: absolute;
+    top: 118%;
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #D3D3D3;
+
+}
+.header__notify-header{
+    height: 40px;
+    background-color: var(--white-color);
+
+}
+.header__notify-header h3 {
+    color: var(--text-color);
+    opacity: 0.7;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    
+}
+.header__notify-list{
+    padding-left: 0;
+}
+.header__notify-item {
+    display: flex;
+}
+.header__notify-item:hover,.header__notify-footer:hover{
+    background-color: #F7F7F7;
+}
+.header__notify-item--view{
+    background-color: rgb(238,25,43,0.08);
+}
+.header__notify-link{
+    display: flex;
+    width: 100%;
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    
+}
+.header__notify-img{
+    width: 48px;
+    object-fit: contain;
+}
+.header__notify-ifo{
+    margin-left: 12px;
+    padding-top: 10px;
+}
+.header__notify-name{
+    display: block;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.header__notify-descriotion{
+    color: #888;
+    font-size: 1.2rem;
+    line-height: 12px;
+}
+.header__notify-footer{
+    text-align: center;
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 9px 16px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
